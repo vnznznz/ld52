@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/planet.png" type="Texture" id=1]
 [ext_resource path="res://scripts/planet.gd" type="Script" id=2]
 [ext_resource path="res://planting_spot.tscn" type="PackedScene" id=3]
-[ext_resource path="res://tomato.tscn" type="PackedScene" id=4]
 
 [node name="planet" type="Node2D"]
 script = ExtResource( 2 )
@@ -12,63 +11,40 @@ script = ExtResource( 2 )
 
 [node name="planting_spot" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( 1, -208 )
-
-[node name="tomato" parent="planting_spots/planting_spot" instance=ExtResource( 4 )]
+has_active_plant = true
 
 [node name="planting_spot2" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( 100, -174 )
 
-[node name="tomato2" parent="planting_spots/planting_spot2" instance=ExtResource( 4 )]
-
 [node name="planting_spot3" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( 166, -100 )
-
-[node name="tomato3" parent="planting_spots/planting_spot3" instance=ExtResource( 4 )]
 
 [node name="planting_spot4" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( 201, -1 )
 
-[node name="tomato4" parent="planting_spots/planting_spot4" instance=ExtResource( 4 )]
-
 [node name="planting_spot5" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( 171, 78 )
-
-[node name="tomato5" parent="planting_spots/planting_spot5" instance=ExtResource( 4 )]
 
 [node name="planting_spot6" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( 102, 157 )
 
-[node name="tomato6" parent="planting_spots/planting_spot6" instance=ExtResource( 4 )]
-
 [node name="planting_spot7" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( 1, 190 )
-
-[node name="tomato7" parent="planting_spots/planting_spot7" instance=ExtResource( 4 )]
 
 [node name="planting_spot8" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( -95, 169 )
 
-[node name="tomato8" parent="planting_spots/planting_spot8" instance=ExtResource( 4 )]
-
 [node name="planting_spot9" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( -168, 104 )
-
-[node name="tomato9" parent="planting_spots/planting_spot9" instance=ExtResource( 4 )]
 
 [node name="planting_spot10" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( -202, -1 )
 
-[node name="tomato" parent="planting_spots/planting_spot10" instance=ExtResource( 4 )]
-
 [node name="planting_spot11" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( -186, -90 )
 
-[node name="tomato" parent="planting_spots/planting_spot11" instance=ExtResource( 4 )]
-
 [node name="planting_spot12" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( -114, -171 )
-
-[node name="tomato" parent="planting_spots/planting_spot12" instance=ExtResource( 4 )]
 
 [node name="sprite" type="Sprite" parent="."]
 scale = Vector2( 2, 2 )

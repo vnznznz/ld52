@@ -14,6 +14,5 @@ frame = 4
 
 [node name="grow_rate" type="Timer" parent="."]
 wait_time = 0.5
-autostart = true
 
 [connection signal="timeout" from="grow_rate" to="." method="_on_grow_rate_timeout"]

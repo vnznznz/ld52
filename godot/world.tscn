@@ -5,12 +5,15 @@
 
 [node name="world" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.5, 1.5 )
+
 [node name="planet" parent="." instance=ExtResource( 1 )]
-position = Vector2( 512, 384 )
 rotation = 0.00630886
 
 [node name="sun" parent="." instance=ExtResource( 2 )]
-position = Vector2( 80, 35 )
+position = Vector2( -462, -339 )
 rotation = 2.29511
-radius = 500
+radius = 600
 speed = 0.25
