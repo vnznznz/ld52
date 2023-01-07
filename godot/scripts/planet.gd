@@ -17,7 +17,7 @@ func _process(delta):
 		update()		
 		var drag = (drag_end - drag_start)
 		rotate_mag = easeInCirc(clamp(drag.length(), 0, 150) / 500) * sign((drag_end - drag_start).normalized().x + (drag_start - drag_end).normalized().y) # yes
-		self.rotate(rotate_mag)
+		self.look_at(get_global_mouse_position())
 		
 		
 func _draw():

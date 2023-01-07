@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="289.258" y1="166.796" x2="289.258" y2="200" id="gradient-1" spreadMethod="reflect" gradientTransform="matrix(-0.996977, -0.077703, -0.010237, -1.295091, 579.552873, 438.492201)">
+      <stop offset="0" style="stop-color: rgba(103, 22, 141, 1)"/>
+      <stop offset="1" style="stop-color: rgba(39, 8, 53, 1)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="280.353" cy="176.59" r="36.914" id="gradient-0" gradientTransform="matrix(0.000835, -1.21097, 1, 0.000689, 112.873902, 528.027263)">
+      <stop offset="0" style="stop-color: rgba(116, 205, 225, 1)"/>
+      <stop offset="1" style="stop-color: rgba(42, 168, 197, 1)"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="292.321" y1="184.678" x2="292.321" y2="251.395" id="gradient-2" gradientTransform="matrix(-0.999591, 0.028616, -0.01738, -1.06356, 591.641174, 444.285706)">
+      <stop offset="0" style="stop-color: rgb(199, 242, 176); stop-opacity: 0;"/>
+      <stop offset="1" style="stop-color: rgba(137, 228, 89, 1)"/>
+    </linearGradient>
+  </defs>
+  <path style="fill: url(#gradient-2);" d="M 235.07 184.678 L 200 251.395 C 209.979 308.777 392.752 296.97 384.642 250.338 L 351.159 185.723 L 235.07 184.678 Z"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: url(#gradient-0);" cx="290.038" cy="162.305" rx="36.914" ry="30.273"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: url(#gradient-1);" cx="289.258" cy="183.398" rx="85.352" ry="16.602"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 39);" cx="215.112" cy="183.815" rx="2.344" ry="2.344"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 39);" cx="238.302" cy="188.759" rx="2.344" ry="2.344"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 39);" cx="260.462" cy="192.313" rx="2.344" ry="2.344"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 39);" cx="280.546" cy="193.719" rx="2.344" ry="2.344"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 39);" cx="302.344" cy="193.529" rx="2.344" ry="2.344"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 39);" cx="322.85" cy="191.6" rx="2.344" ry="2.344"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 39);" cx="346.774" cy="188.722" rx="2.344" ry="2.344"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 39);" cx="365.272" cy="183.366" rx="2.344" ry="2.344"/>
+</svg>
