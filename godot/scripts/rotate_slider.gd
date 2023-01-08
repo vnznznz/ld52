@@ -16,6 +16,19 @@ func set_planet(planet):
 
 
 func _process(delta):
+	
+	if Input.is_action_just_pressed("reset_speed"):
+		self.value = 180
+		
+	if Input.is_action_just_pressed("ui_right"):
+		self.value += 30
+		
+	
+	if Input.is_action_just_pressed("ui_left"):
+		self.value -= 30
+	
+	self.value = clamp(self.value, 0, 360)
+	
 	$Label.text = "%s" %[self.value]
 	$Arrow1Right.visible = false
 	$Arrow2Right.visible = false
@@ -35,3 +48,5 @@ func _process(delta):
 			planet.rotate(lerp(0, 0.5, (self.value-190) / 190) * delta)
 			$Arrow1Right.visible = true
 		#planet.rotation_degrees = 180 - self.value
+
+

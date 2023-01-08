@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sun.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://rotate_slider.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/rotate_slider.gd" type="Script" id=8]
 [ext_resource path="res://assets/background@2x.png" type="Texture" id=9]
+[ext_resource path="res://scripts/restart.gd" type="Script" id=10]
 
 [node name="world" type="Node2D"]
 
@@ -63,5 +64,16 @@ position = Vector2( -18, -41 )
 
 [node name="Arrow2Left" parent="rotate_slider" index="4"]
 position = Vector2( -19, -42 )
+
+[node name="restart" type="Button" parent="."]
+margin_left = -760.0
+margin_top = -568.0
+margin_right = -696.0
+margin_bottom = -548.0
+rect_scale = Vector2( 2, 2 )
+text = "restart"
+script = ExtResource( 10 )
+
+[connection signal="pressed" from="restart" to="restart" method="_on_restart_pressed"]
 
 [editable path="rotate_slider"]
