@@ -24,15 +24,15 @@ rotation = 2.29511
 radius = 600
 speed = 0.25
 
-[node name="harvester" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4, -337 )
-script = ExtResource( 6 )
-
 [node name="rain" parent="." instance=ExtResource( 4 )]
 position = Vector2( 568, -116 )
 script = ExtResource( 5 )
 radius = 400
 speed = -0.05
+
+[node name="harvester" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4, -337 )
+script = ExtResource( 6 )
 
 [node name="rotate_slider" parent="." instance=ExtResource( 7 )]
 margin_left = 650.0

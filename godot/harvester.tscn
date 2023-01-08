@@ -8,10 +8,10 @@
 position = Vector2( -1, -25 )
 rotation = -1.70758
 emitting = false
-amount = 16
-lifetime = 0.5
+amount = 20
 one_shot = true
 explosiveness = 0.54
+randomness = 0.05
 emission_shape = 1
 emission_sphere_radius = 1.0
 spread = 63.78
