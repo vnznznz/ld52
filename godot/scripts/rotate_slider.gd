@@ -1,4 +1,4 @@
-extends VSlider
+extends HSlider
 
 
 # Declare member variables here. Examples:
@@ -16,5 +16,14 @@ func set_planet(planet):
 
 
 func _process(delta):
-	if is_instance_valid(planet):
-		planet.rotation_degrees = 180 - self.value
+	$Label.text = "%s" %[self.value]
+	if is_instance_valid(planet):		
+		if self.value <=40:
+			planet.rotate(-lerp(0.025, 0.05, (40-self.value) / 40))
+		elif self.value <=170:
+			planet.rotate(-lerp(0, 0.025, (170-self.value) / 170))
+		elif self.value >=320:
+			planet.rotate(lerp(0.025, 0.05, (self.value-320) / 40))
+		elif self.value >=190:
+			planet.rotate(lerp(0, 0.025, (self.value-190) / 190))
+		#planet.rotation_degrees = 180 - self.value
