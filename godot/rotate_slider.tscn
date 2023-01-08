@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="rotate_slider" type="VSlider"]
+margin_left = -12.0
+margin_top = -152.0
+margin_right = 4.0
+margin_bottom = 138.0
+max_value = 360.0
+value = 180.0

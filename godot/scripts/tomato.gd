@@ -3,11 +3,11 @@ extends Node2D
 
 # Declare member variables here. Examples:
 # var a = 2
-var SUN_EXPOSURE_STRENGTH:float = 200.0
-var SUN_EXPOSURE_DECAY:float = 100.0
+var SUN_EXPOSURE_STRENGTH:float = 100.0
+var SUN_EXPOSURE_DECAY:float = 50.0
 
-var RAIN_EXPOSURE_STRENGTH:float = 100.0
-var RAIN_EXPOSURE_DECAY:float = 75.0
+var RAIN_EXPOSURE_STRENGTH:float = 50.0
+var RAIN_EXPOSURE_DECAY:float = 37.5
 
 var HARVESTER_EXPOSURE_STRENGTH:float = 300.0
 var HARVESTER_EXPOSURE_DECAY:float = 25.0
@@ -27,10 +27,10 @@ enum NEEDS {
 
 
 var GROWTH_LEVELS = [
-	[NEEDS.SUN, 400],
-	[NEEDS.SHADE, 600],
-	[NEEDS.RAIN, 400],
-	[NEEDS.SUN, 400],
+	[NEEDS.SUN, 800],
+	[NEEDS.SHADE, 1200],
+	[NEEDS.RAIN, 800],
+	[NEEDS.SUN, 800],
 	[NEEDS.HARVEST, 100],
 ]
 
