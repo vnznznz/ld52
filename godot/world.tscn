@@ -24,6 +24,10 @@ zoom = Vector2( 1.5, 1.5 )
 [node name="planet" parent="." instance=ExtResource( 1 )]
 rotation = 0.00630886
 
+[node name="Listener2D" type="Listener2D" parent="planet"]
+rotation = -0.00630886
+current = true
+
 [node name="sun" parent="." instance=ExtResource( 2 )]
 position = Vector2( -649, -462 )
 rotation = 2.29511

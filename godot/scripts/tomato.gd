@@ -43,7 +43,34 @@ var has_harvester_exposure:bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$sprite.frame = 0
+	
+	for sound in G.SOUNDS:
+		var player = AudioStreamPlayer2D.new()
+		player.set_stream(sound)
+		$notes.add_child(player)
+	
+	for blip in G.BLIPS:
+		var player = AudioStreamPlayer2D.new()
+		player.set_stream(blip)
+		$blips.add_child(player)
 
+func sound():
+	var candidates = []
+	for note in $notes.get_children():
+		if not note.playing:
+			candidates.append(note)
+	if len(candidates) > 0:
+		var selected_sound_idx = randi() % len(candidates)	
+		candidates[selected_sound_idx].play()
+
+func blip():
+	var candidates = []
+	for note in $blips.get_children():
+		if not note.playing:
+			candidates.append(note)
+	if len(candidates) > 0:
+		var selected_sound_idx = randi() % len(candidates)	
+		candidates[selected_sound_idx].play()
 
 func receive_sun_power():
 	if not is_need_active:
@@ -52,6 +79,7 @@ func receive_sun_power():
 	var required_exposure = GROWTH_LEVELS[current_growth_level][1]
 	if current_need == NEEDS.SUN:
 		current_exposure += 1
+		blip()
 	# elif current_need == NEEDS.SHADE:
 	#	current_exposure -= 1
 
@@ -62,6 +90,7 @@ func receive_rain():
 	var required_exposure = GROWTH_LEVELS[current_growth_level][1]
 	if current_need == NEEDS.RAIN:
 		current_exposure += 1
+		blip()
 
 func harvest():
 	if not is_need_active:
@@ -69,6 +98,7 @@ func harvest():
 	var current_need =  GROWTH_LEVELS[current_growth_level][0]
 	var required_exposure = GROWTH_LEVELS[current_growth_level][1]
 	if current_need == NEEDS.HARVEST:
+		sound()
 		current_growth_level = 0
 		get_tree().call_group(G.NEEDS_HARVEST_EVENT, "on_harvest")
 
@@ -81,6 +111,7 @@ func _process(_delta):
 	if current_exposure >= required_exposure:
 		current_growth_level += 1
 		excite()
+		sound()
 		$enable_need.start(rand_range(1, 3))
 		is_need_active = false
 		current_exposure = 0

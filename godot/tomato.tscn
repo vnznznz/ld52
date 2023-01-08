@@ -44,4 +44,8 @@ scale_amount = 10.17
 scale_amount_random = 0.27
 color = Color( 0.490196, 0.85098, 0.360784, 1 )
 
+[node name="notes" type="Node" parent="."]
+
+[node name="blips" type="Node" parent="."]
+
 [connection signal="timeout" from="enable_need" to="." method="_on_enable_need_timeout"]
