@@ -26,6 +26,9 @@ func on_harvest():
 	$excite.restart()
 	harvest_count += 1
 	$harvest_label.text = "%s" %[harvest_count]
+	
+	if harvest_count == 30:
+		get_tree().call_group(G.NEEDS_WIN, "on_win")
 
 func _process(delta):
 	update()

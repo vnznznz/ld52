@@ -5,6 +5,8 @@ var NEEDS_SUN = "needs_sun"
 var NEEDS_RAIN = "needs_rain"
 var NEEDS_HARVESTER = "needs_harvester"
 
+var NEEDS_WIN = "needs_win"
+
 var NEEDS_HARVEST_EVENT = "needs_harvest_event"
 
 var label = Label.new()
