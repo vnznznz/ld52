@@ -44,7 +44,7 @@ func has_exposure(current_angle, bounds):
 	if current_angle >= left and current_angle <= right:
 		return true		
 	return false
-func _process(delta):	
+func _process(_delta):	
 
 	if not is_instance_valid(sun):
 		return

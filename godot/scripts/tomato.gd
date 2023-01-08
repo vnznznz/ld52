@@ -73,9 +73,9 @@ func harvest():
 		get_tree().call_group(G.NEEDS_HARVEST_EVENT, "on_harvest")
 
 
-func _process(delta):
+func _process(_delta):
 	update()
-	var current_need =  GROWTH_LEVELS[current_growth_level][0]
+	#var current_need =  GROWTH_LEVELS[current_growth_level][0]
 	var required_exposure = GROWTH_LEVELS[current_growth_level][1]
 	
 	if current_exposure >= required_exposure:
@@ -111,10 +111,6 @@ func _draw():
 	var required_exposure = GROWTH_LEVELS[current_growth_level][1]
 	if has_required_exposure:
 		marker_color = Color.yellowgreen
-	
-	$icon.draw_circle(Vector2.ZERO, 5, marker_color)
-	$icon.draw_circle(Vector2.ZERO, 5 + 30 * (current_exposure / required_exposure), marker_color)
-	$icon.update()
 	
 	
 func _on_grow_rate_timeout():
