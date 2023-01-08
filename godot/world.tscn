@@ -47,3 +47,17 @@ margin_right = 105.0
 margin_bottom = -375.0
 step = 0.1
 script = ExtResource( 8 )
+
+[node name="Arrow1Right" parent="rotate_slider" index="1"]
+position = Vector2( 228, -42 )
+
+[node name="Arrow2Right" parent="rotate_slider" index="2"]
+position = Vector2( 229, -41 )
+
+[node name="Arrow1Left" parent="rotate_slider" index="3"]
+position = Vector2( -18, -41 )
+
+[node name="Arrow2Left" parent="rotate_slider" index="4"]
+position = Vector2( -19, -42 )
+
+[editable path="rotate_slider"]

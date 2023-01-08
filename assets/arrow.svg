@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2px; stroke-linecap: round;" d="M 264.403 123.261 C 264.491 123.381 276.579 113.803 300 124.807"/>
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 2px;" d="M 294.32 127.966 L 299.992 124.499 L 297.261 118.827 L 300.647 125.285 L 294.32 127.966 Z"/>
+  <path style="stroke: rgb(0, 0, 0); stroke-linecap: round; fill: none; stroke-width: 2px;" d="M 264.403 134.395 C 264.491 134.515 276.579 124.937 300 135.941"/>
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-linecap: round;" d="M 294.32 139.1 L 299.992 135.633 L 297.261 129.961 L 300.699 136.15 L 294.32 139.1 Z"/>
+</svg>
