@@ -23,6 +23,7 @@ func stop_sending_collector(plant_spot):
 	collectors.erase(plant_spot)
 
 func on_harvest():
+	$excite.restart()
 	harvest_count += 1
 	$harvest_label.text = "%s" %[harvest_count]
 

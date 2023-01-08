@@ -80,6 +80,7 @@ func _process(delta):
 	
 	if current_exposure >= required_exposure:
 		current_growth_level += 1
+		excite()
 		$enable_need.start(rand_range(1, 3))
 		is_need_active = false
 		current_exposure = 0
@@ -101,6 +102,9 @@ func needs_rain():
 
 func needs_harvest():
 	return GROWTH_LEVELS[current_growth_level][0] == NEEDS.HARVEST
+
+func excite():
+	$excite.restart()
 
 func _draw():
 	var marker_color = Color.gray

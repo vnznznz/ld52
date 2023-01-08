@@ -24,4 +24,24 @@ hframes = 5
 wait_time = 2.0
 one_shot = true
 
+[node name="excite" type="CPUParticles2D" parent="."]
+position = Vector2( 9.53674e-07, 5.72205e-06 )
+rotation = -1.70758
+z_index = 15
+z_as_relative = false
+emitting = false
+amount = 16
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.54
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 63.78
+initial_velocity = 266.06
+initial_velocity_random = 0.23
+radial_accel = 10.0
+scale_amount = 10.17
+scale_amount_random = 0.27
+color = Color( 0.490196, 0.85098, 0.360784, 1 )
+
 [connection signal="timeout" from="enable_need" to="." method="_on_enable_need_timeout"]

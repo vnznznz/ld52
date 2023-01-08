@@ -21,7 +21,7 @@ func on_harvest():
 			candidates_to_unlock.append(plant_spot)
 	
 	if len(candidates_to_unlock) > 0:
-		candidates_to_unlock[randi() % len(candidates_to_unlock)].has_active_plant=true
+		candidates_to_unlock[randi() % len(candidates_to_unlock)].activate_plant()
 
 func _process(delta):	
 	pass

@@ -4,6 +4,24 @@
 
 [node name="harvester" type="Node2D"]
 
+[node name="excite" type="CPUParticles2D" parent="."]
+position = Vector2( -1, -25 )
+rotation = -1.70758
+emitting = false
+amount = 16
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.54
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 63.78
+initial_velocity = 266.06
+initial_velocity_random = 0.23
+radial_accel = 10.0
+scale_amount = 10.17
+scale_amount_random = 0.27
+color = Color( 0.698039, 0.360784, 0.85098, 1 )
+
 [node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 

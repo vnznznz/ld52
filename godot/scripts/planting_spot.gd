@@ -91,7 +91,9 @@ func receive_rain():
 func harvest():
 	$plant/tomato.harvest()
 
-
+func activate_plant():
+	has_active_plant = true
+	$plant/tomato.excite()
 func _draw():	
 	
 	if not is_instance_valid(planet):
