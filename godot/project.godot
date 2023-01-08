@@ -21,6 +21,8 @@ G="*res://scripts/G.gd"
 [display]
 
 window/size/height=768
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
 
 [gui]
 
