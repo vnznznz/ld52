@@ -14,13 +14,14 @@ hframes = 5
 frame = 4
 
 [node name="icon" type="Sprite" parent="."]
-position = Vector2( -52, -43 )
+position = Vector2( 2, 45 )
 z_index = 10
 z_as_relative = false
 texture = ExtResource( 3 )
 hframes = 5
 
-[node name="grow_rate" type="Timer" parent="."]
-wait_time = 0.5
+[node name="enable_need" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 
-[connection signal="timeout" from="grow_rate" to="." method="_on_grow_rate_timeout"]
+[connection signal="timeout" from="enable_need" to="." method="_on_enable_need_timeout"]

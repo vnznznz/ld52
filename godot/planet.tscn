@@ -27,7 +27,6 @@ position = Vector2( 171, 78 )
 
 [node name="planting_spot6" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( 102, 157 )
-has_active_plant = true
 
 [node name="planting_spot7" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( 1, 190 )
@@ -46,7 +45,6 @@ position = Vector2( -186, -90 )
 
 [node name="planting_spot12" parent="planting_spots" instance=ExtResource( 3 )]
 position = Vector2( -114, -171 )
-has_active_plant = true
 
 [node name="sprite" type="Sprite" parent="."]
 scale = Vector2( 2, 2 )

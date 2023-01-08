@@ -5,12 +5,23 @@ var drag_start:Vector2
 var drag_end:Vector2
 var rotate_mag:float = 0
 func _ready():
+	add_to_group(G.NEEDS_HARVEST_EVENT)
 	yield(get_tree(), "idle_frame")
 	get_tree().call_group(G.NEEDS_PLANET, "set_planet", self)
 
 
 func easeInCirc(x):
 	return 1 - sqrt(1 - pow(x, 2));
+	
+	
+func on_harvest():
+	var candidates_to_unlock = []
+	for plant_spot in $planting_spots.get_children():
+		if not plant_spot.has_active_plant:
+			candidates_to_unlock.append(plant_spot)
+	
+	if len(candidates_to_unlock) > 0:
+		candidates_to_unlock[randi() % len(candidates_to_unlock)].has_active_plant=true
 
 func _process(delta):	
 	pass

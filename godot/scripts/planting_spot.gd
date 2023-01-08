@@ -66,8 +66,30 @@ func _process(delta):
 	else:
 		$plant.visible = false
 		
+	if has_active_plant:
+		if has_sun_exposure and $plant/tomato.needs_sun():
+			sun.send_power(self)
+		else:
+			sun.stop_sending_power(self)
+			
+		if has_rain_exposure and $plant/tomato.needs_rain():
+			rain.send_rain(self)
+		else:
+			rain.stop_sending_rain(self)
+		
+		if has_harvester_exposure and $plant/tomato.needs_harvest():
+			harvester.send_collector(self)
+		else:
+			harvester.stop_sending_collector(self)
 	
+func receive_sun_power():
+	$plant/tomato.receive_sun_power()
+
+func receive_rain():
+	$plant/tomato.receive_rain()
 	
+func harvest():
+	$plant/tomato.harvest()
 
 
 func _draw():	
@@ -81,15 +103,16 @@ func _draw():
 	# draw_string(G.DEFAULT_FONT, (Vector2.UP * 200),"%f°" % [angle_to_sun])
 	
 	var marker_color = Color.darkgoldenrod
-	if has_sun_exposure:
-		marker_color = Color.green
-		draw_line(Vector2.ZERO, to_local(sun.global_position), Color.yellow, 4)
-	if has_rain_exposure:
-		marker_color = Color.green
-		draw_line(Vector2.ZERO, to_local(rain.global_position), Color.blue, 4)
-	if has_harvester_exposure:
-		marker_color = Color.green
-		draw_line(Vector2.ZERO, to_local(harvester.global_position), Color.purple, 1)
+	if has_active_plant:
+		if has_sun_exposure and $plant/tomato.needs_sun():
+			marker_color = Color.green
+			draw_line(Vector2.ZERO, to_local(sun.global_position), Color.yellow, 4)
+		if has_rain_exposure and $plant/tomato.needs_rain():
+			marker_color = Color.green
+			draw_line(Vector2.ZERO, to_local(rain.global_position), Color.blue, 4)
+		if has_harvester_exposure and $plant/tomato.needs_harvest():
+			marker_color = Color.green
+			draw_line(Vector2.ZERO, to_local(harvester.global_position), Color.purple, 1)
 
 		# draw_line(Vector2.ZERO, (Vector2.UP * 200).rotated(-PI/4), marker_color, 4)
 		# draw_line(Vector2.ZERO, (Vector2.UP * 200).rotated(PI/4), marker_color, 4)
